@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SP Mart | E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">SP</div>
+      <div>
+        <h1>SP Mart</h1>
+        <p>Your simple online store</p>
+      </div>
+    </div>
+    <button id="cartBtn" class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Welcome to SP Mart</span>
+        <h2>Shop your favorites.</h2>
+        <p>Add products, manage your inventory, and build your cart with a simple browser-based store.</p>
+      </div>
+    </section>
+
+    <section class="admin-card">
+      <div class="section-title">
+        <div>
+          <h2>Product Management</h2>
+          <p>Add or remove products from your store.</p>
+        </div>
+      </div>
+
+      <form id="productForm" class="product-form">
+        <input id="productName" type="text" placeholder="Product name" required>
+        <input id="productPrice" type="number" min="0" step="0.01" placeholder="Price" required>
+        <input id="productImage" type="url" placeholder="Image URL (optional)">
+        <input id="productCategory" type="text" placeholder="Category">
+        <button type="submit" class="primary-btn">＋ Add Product</button>
+      </form>
+    </section>
+
+    <section class="store-section">
+      <div class="section-title">
+        <div>
+          <h2>Products</h2>
+          <p id="productSummary">0 products</p>
+        </div>
+        <input id="searchInput" class="search" type="search" placeholder="Search products...">
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="icon-btn">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button id="checkoutBtn" class="primary-btn checkout">Checkout</button>
+      <button id="clearCartBtn" class="clear-btn">Clear cart</button>
+    </div>
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
